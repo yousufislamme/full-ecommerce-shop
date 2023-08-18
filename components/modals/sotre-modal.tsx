@@ -39,10 +39,10 @@ export const StoreModal = () => {
             setLoading(true);
             const response = await axios.post('/api/stores', values);
 
-            console.log(response.data);
+            console.log('[test response data]',response.data);
    
          } catch (error) {
-            console.log(error);
+            console.log(error); 
       
          } finally {
             setLoading(false);
@@ -50,6 +50,8 @@ export const StoreModal = () => {
       }
       
    return (
+      <>
+    
       <Modal
          title="Create Store"
          description="Add a new store to manage products and categories"
@@ -101,6 +103,7 @@ export const StoreModal = () => {
             </div>
          </div>
          
-      </Modal>
+         </Modal>
+    </>
    )
 }
